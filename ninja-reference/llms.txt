@@ -1,0 +1,46 @@
+# OGame Ninja — Advanced Control & Operation Reference (LLM bundle)
+
+> Anonymized reference for **advanced OGame NinjaBot users** who want to **drive and operate the bot
+> programmatically** — its management panel (HTTP API + SQLite DB), browser automation (Playwright),
+> module behavior and error handling. Feed this bundle to an AI so it can help you build panel-automation
+> code (Python/Playwright) and operate a fleet of bots.
+>
+> **Not covered here:** writing Anko `.ank` scripts. That in-bot API is documented comprehensively
+> elsewhere (see "Scripting — external" below), so this bundle deliberately does not duplicate it.
+
+## How to use this bundle (for the AI reading it)
+
+- Every file starts with a **YAML frontmatter** block (`title`, `category`, `layer`, `tags`, `summary`) —
+  use it to route retrieval.
+- Files are grouped by **layer**: `control-plane` → `operation`.
+- All example values are **fictional placeholders** (`ServerA`, `sXXX-en`, `EXAMPLE_*`, `user@example.com`,
+  RFC-5737 IPs). Treat every value as an example, never as real configuration.
+
+## Control plane — drive the bot programmatically (layer: control-plane)
+
+- [Panel HTTP API & Database Reference](01-control-plane/panel-http-api.md): every panel HTTP endpoint
+  (bot lifecycle, settings, modules, scripts REST API, fingerprints, SSE) + the SQLite schema. Start here
+  to write code that creates/configures/monitors bots.
+- [Panel Pages, URLs & HTML Selectors](01-control-plane/panel-pages-and-selectors.md): URLs, form fields
+  and CSS selectors for Playwright automation of the panel.
+
+## Operation — configure modules & keep bots healthy (layer: operation)
+
+- [Bot Modules Reference](02-operation/bot-modules.md): behavior of Brain, Scanner, Hunter, Defender,
+  Farmer, Colonizer, Spyer and Discovery — needed to configure them via the API.
+- [Errors & Troubleshooting](02-operation/errors-and-troubleshooting.md): error catalog and the correct
+  reaction for each (bot creation, sessions, HTTP 403).
+
+## Scripting — external (not in this bundle)
+
+Writing `.ank` scripts (the in-bot Anko API — bot control, fleets, resources, event channels, cron,
+constants) is **not** part of this bundle. It is already documented in full:
+
+- Official documentation: https://www.ogame.ninja/doc
+- Official repositories & examples: https://github.com/ogame-ninja
+
+## Optional
+
+- [README.md](README.md): human-oriented index of this bundle.
+- [ninja-reference-public-full.md](ninja-reference-public-full.md): all docs concatenated into a single
+  file — convenient to paste/upload into an AI in one shot.
