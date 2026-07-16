@@ -41,6 +41,6 @@ constants) is **not** part of this bundle. It is already documented in full:
 
 ## Optional
 
-- [README.md](README.md): human-oriented index of this bundle.
+- [Repository README](../README.md): human-oriented landing page for this repository.
 - [ninja-reference-public-full.md](ninja-reference-public-full.md): all docs concatenated into a single
   file — convenient to paste/upload into an AI in one shot.
